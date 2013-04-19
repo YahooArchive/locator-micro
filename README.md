@@ -1,4 +1,4 @@
 modown-micro
 ============
 
-Modown Micro Component
+locator plugin for micro templates
