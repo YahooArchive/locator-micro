@@ -1,4 +1,4 @@
-modown-micro
-============
+locator-micro
+=============
 
-locator plugin for micro templates
+micro template compiler for locator
