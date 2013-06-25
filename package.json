@@ -7,6 +7,14 @@
     "dependencies": {
         "yui": "~3.10.2"
     },
+    "devDependencies": {
+        "chai": "*",
+        "istanbul": "*",
+        "jslint": "*",
+        "mocha": "*",
+        "mockery": "1.4.x",
+        "xunit-file": "*"
+    },
     "main": "index",
     "keywords": [
         "framework",
@@ -23,15 +31,8 @@
         "node": ">0.8",
         "npm": ">1.0"
     },
-    "homepage": "yo/modown",
-    "devDependencies": {
-        "chai": "*",
-        "istanbul": "*",
-        "jslint": "*",
-        "mocha": "*",
-        "mockery": "1.4.x",
-        "xunit-file": "*"
-    },
+    "repository": "git://github.com/yahoo/locator-micro.git",
+    "bugs": "https://github.com/yahoo/locator-micro/issues",
     "scripts": {
         "lint": "node node_modules/.bin/jslint lib/*.js",
         "test": "node node_modules/.bin/_mocha tests/lib/*.js --reporter spec"
