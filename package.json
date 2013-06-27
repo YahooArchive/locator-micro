@@ -33,6 +33,8 @@
         "mockery": "1.4.x",
         "xunit-file": "*"
     },
+    "repository": "git://github.com/yahoo/locator-micro.git",
+    "bugs": "https://github.com/yahoo/locator-micro/issues",
     "scripts": {
         "lint": "node node_modules/.bin/jshint --config ./node_modules/yui-lint/jshint.json ./lib/*.js",
         "test": "node node_modules/.bin/_mocha tests/lib/*.js --reporter spec"
