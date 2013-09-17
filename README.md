@@ -30,45 +30,29 @@ By installing the module in your express application folder, you should be able 
 Usage
 -----
 
-### Integration with `locator` on the server side
+### Integration with `locator`
 
-Normally, you will plug the locator plugin exposed by `locator-micro` into the locator instance, and locator will be able to analyze every file in your express app, and it will compile any `*.hb`, `*.hbs` or `*.micro` into a YUI module that can be used thru `express-yui` for example. The example below describes how to use the yui plugin with locator:
+You can create an instance of the plugin and plug it into the locator instance, and locator will be able to analyze every file in your express app, and it will compile any `*.micro` into memory, making them available thru `express-view`.
+
+Optionally, it will be able to compile it into the locator build folder using one of the supported output format (for now it supports `yui`, but in the future will support `amd` and `es6` as well).
+
+The example below describes how to use the yui plugin with locator:
 
 ```
 var Locator = require('locator'),
     LocatorMicro = require('locator-micro'),
     loc = new Locator();
 
-// using locator-micro yui plugin
-loc.plug(LocatorMicro.yui());
+// using locator-micro plugin
+loc.plug(new LocatorMicro({ format: '<optional-output-format>' }));
 
-// walking the filesystem for an express app
-loc.parseBundle(__dirname, {});
-```
-
-### Server side with `express` and `express-yui`
+### Integration with `express`, `express-view` and `yui`
 
 You can try a working example here:
 
 https://github.com/yahoo/locator-micro/tree/master/example
 
-### Client side with `yui`
-
-On the client side, any [Micro][] template will be accessible as well thru `yui` as a regular yui module. Here is an example:
-
-```
-app.yui.use('<name-of-app>-templates-bar', function (Y) {
-
-    Y.Template._cache['<name-of-app>/bar']({
-        tagline: 'testing with some data for template bar'
-    }, Y.one('#container'));
-
-});
-```
-
-In the example above, the `<name-of-app>` is the name specified in the `package.json` for your express application, and the template `bar.micro` will be rendered under the `#container` selector.
-
-_note: in the near future, `Y.Template.render()` will be the formal API instead of using the `_cache` object, which is protected._
+This example explores how to use `locator-micro` on the server side with `express` and `express-view`, while using `yui` on the client side as a medium to load the compiled templates on demand to refresh parts of the page without hitting the server to render the templates.
 
 
 License

@@ -16,12 +16,14 @@
 
     <div id="barclient">waiting...</div>
 
-    <script><%== data.state %></script>
+    <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-debug.js"></script>
+    <script src="/static/demo-0.0.1/demo-templates-bar.js"></script>
     <script>
-    // this is the code to be executed in the client side to
-    // boot the application.
-    app.yui.use('node', 'demo-templates-bar', function (Y) {
-        var fooContent = Y.Template._cache['demo/bar']({
+    // since we use `format` equal to `yui` when creating the plugin
+    // instance, we can use the templates in the client side using
+    // yui as the medium to provision the compiled templates.
+    YUI().use('node', 'demo-templates-bar', function (Y) {
+        var fooContent = Y.Template.get('demo/bar')({
             tagline: 'rendering template bar at the client side',
             bundle: 'demo'
         });

@@ -7,14 +7,14 @@
 
 /*jslint nomen:true, node:true */
 /*globals describe,it */
-"use strict";
 
+"use strict";
 
 var libpath = require('path'),
     libfs = require('fs'),
     mockery = require('mockery'),
     expect = require('chai').expect,
-    plugin = require('../../lib/plugin.js');
+    Plugin = require('../../lib/plugin.js');
 
 describe('plugin', function () {
 
@@ -22,7 +22,7 @@ describe('plugin', function () {
 
         // we nee to write some tests here!
         it('extensions', function () {
-            expect(plugin.describe.extensions[0]).to.equal('micro');
+            expect(new Plugin().describe.extensions[0]).to.equal('micro');
         });
 
     });
