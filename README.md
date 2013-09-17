@@ -5,9 +5,9 @@ Micro template compiler for locator.
 
 [![Build Status](https://travis-ci.org/yahoo/locator-micro.png?branch=master)](https://travis-ci.org/yahoo/locator-micro)
 
-This component is a result of the integration between [YUI][] and [Locator][] component from Yahoo! to compile [Micro][]' templates into [YUI][] Modules that could be used on the server thru express and on the client thru [YAF][].
+This component can be integrated with [Locator][] component from Yahoo! to compile [Micro][]' templates. The compiled tempaltes could be used on the server thru `express-view` and on the client thru a module loader depending on the format you decide to compile to, by default it supports [YUI][] format to be able to use the templates with [YAF][].
 
-The beaufy of this is that you will NOT need to download the full `micro` parser component or the template itself, instead you use YUI Loader to load modules that will provision the micro templates in a form of javascript functions ready to be execute to produce a html fragment.
+The beaufy of this is that you will NOT need to download the full `micro` parser component or the template itself, instead you use a loader to load modules that will provision the micro templates in a form of javascript functions ready to be execute to produce a html fragment.
 
 [Micro]: http://yuilibrary.com/yui/docs/template/
 [Locator]: https://github.com/yahoo/locator
