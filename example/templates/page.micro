@@ -23,11 +23,10 @@
     // instance, we can use the templates in the client side using
     // yui as the medium to provision the compiled templates.
     YUI().use('node', 'demo-template-bar', function (Y) {
-        var fooContent = Y.Template.get('demo/bar')({
-            tagline: 'rendering template bar at the client side',
-            bundle: 'demo'
+        var barContent = Y.Template.get('demo/bar')({
+            tagline: 'rendering template bar at the client side'
         });
-        Y.one('#barclient').setHTML(fooContent);
+        Y.one('#barclient').setHTML(barContent);
     });
     </script>
 

@@ -9,7 +9,7 @@ How does it work?
 
 There are two templates in this example, `templates/bar.micro` and `templates/page.micro`. They work together to form a composite view where `bar` will be inserted within a `div` in `page`'s `outlet` entry.
 
-But when the page gets executed on the browser, we can use YUI to load a compiled version of `bar` on-demand, and call for render, producing a html fragment that can be inserted in the DOM.
+But when the page gets executed on the browser, we can use a loader (e.g.: YUI Loader) to load a compiled version of `bar` on-demand, and call for render, producing a html fragment that can be inserted in the DOM.
 
 
 How to test this app?
