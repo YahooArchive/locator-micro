@@ -27,7 +27,7 @@
             tagline: 'rendering template bar at the client side',
             bundle: 'demo'
         });
-        Y.one('#barclient').setContent(fooContent);
+        Y.one('#barclient').setHTML(fooContent);
     });
     </script>
 
