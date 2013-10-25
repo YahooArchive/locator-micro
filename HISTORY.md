@@ -4,6 +4,10 @@ Locator Micro Change History
 @NEXT@
 ------------------
 
+0.2.0 (2013-10-25)
+------------------
+
+* __[!]__ this version is not compatible with previous version of the plugin.
 * the plugin is now a class definition that can be extended easily.
 * leverage `Y.Template.register()` and `Y.Template.get()`, available in yui@3.12.x.
 * a compiled version of the template is provisioned under the bundle object for runtime on the server side.
