@@ -1,13 +1,13 @@
 {
     "name": "locator-micro",
     "description": "Micro template compiler for locator",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "author": "Caridy Patino <caridy@yahoo-inc.com> (http://github.com/caridy)",
     "contributors": [],
     "dependencies": {
         "yui": "3.x"
     },
-    "main": "index",
+    "main": "./lib/plugin.js",
     "keywords": [
         "framework",
         "yui",
@@ -37,6 +37,7 @@
     "bugs": "https://github.com/yahoo/locator-micro/issues",
     "scripts": {
         "lint": "node node_modules/.bin/jshint --config ./node_modules/yui-lint/jshint.json ./lib/*.js",
+        "pretest": "npm run lint",
         "test": "node node_modules/.bin/_mocha tests/lib/*.js --reporter spec"
     },
     "license": "BSD"
